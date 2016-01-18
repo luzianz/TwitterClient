@@ -1,0 +1,15 @@
+{
+	"authors": [
+		"Luzian Zagadinow"
+	],
+	"version": "1.0",
+	"tooling": {
+		"defaultNamespace": "LZ"
+	},
+	"dependencies": {
+		"Microsoft.Net.Http": "2.2.29"
+	},
+	"frameworks": {
+		"dnx451": {}
+	}	
+}
