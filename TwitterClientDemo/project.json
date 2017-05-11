@@ -10,7 +10,8 @@
 		"LZ": "1.0",
 		"LZ.Security.OAuth.ApiClients.Twitter": "1.0",
 		"Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
-		"Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final"
+		"Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
+		"Newtonsoft.Json": "8.0.2"
 	},
 	"frameworks": {
 		"dnx451": { }
