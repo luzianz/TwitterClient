@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace TwitterClientDemo
 {
-    static class Program
+	static class Program
 	{
 		private static ICredential consumerCredentials;
 		private static ICredential accessToken;
@@ -37,7 +37,7 @@ namespace TwitterClientDemo
 		}
 		
 		static async Task Run()
-		{			
+		{
 			if (accessToken == null)
 			{
 				var authorizer = new Authorizer(consumerCredentials, new ConsoleWebAuthenticationBroker());

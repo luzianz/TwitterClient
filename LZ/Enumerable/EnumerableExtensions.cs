@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LZ.Enumerable
 {
-    public static class EnumerableExtensions
+	public static class EnumerableExtensions
 	{
 		/// <summary>
 		/// Joins an enumeration to a string which can be delimited.

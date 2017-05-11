@@ -17,16 +17,16 @@ namespace LZ.Security.Cryptography
 					break;
 				case HashAlgorithmNames.Sha256:
 					alg = new C.HMACSHA256();
-                    break;
+					break;
 				case HashAlgorithmNames.Sha384:
 					alg = new C.HMACSHA384();
-                    break;
+					break;
 				case HashAlgorithmNames.Sha512:
 					alg = new C.HMACSHA512();
-                    break;
+					break;
 				case HashAlgorithmNames.Md5:
 					alg = new C.HMACMD5();
-                    break;
+					break;
 				default:
 					throw new NotSupportedException();
 			}
@@ -106,7 +106,7 @@ namespace LZ.Security.Cryptography
 			CryptographicBuffer.CopyToByteArray(resultBuffer, out result);
 
 			return result;
-        }
+		}
 	}
 }
 #endif

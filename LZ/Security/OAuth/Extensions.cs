@@ -52,8 +52,8 @@ namespace LZ.Security.OAuth
 		{
 			string urlEncodedParams = parameters.ToEncodedQueryString(sort: true);
 
-			var signatureBaseString = new StringBuilder();   // note that this is a StringBuilder, not a string. You need to call .ToString() for the string.
-			signatureBaseString.Append(httpMethod);   // you would never need to percent-encoded this since it is only letters
+			var signatureBaseString = new StringBuilder(); // note that this is a StringBuilder, not a string. You need to call .ToString() for the string.
+			signatureBaseString.Append(httpMethod); // you would never need to percent-encoded this since it is only letters
 			signatureBaseString.Append('&');
 			signatureBaseString.Append(requestUrl.ToNormalizedString().PercentEncode());
 			signatureBaseString.Append('&');

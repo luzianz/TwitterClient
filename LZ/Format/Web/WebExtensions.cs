@@ -59,7 +59,7 @@ namespace LZ.Format.Web
 				|| c.IsBetweenAandZ_Lower()); // a-z
 		}
 
-        public static string ToNormalizedString(this Uri uri)
+		public static string ToNormalizedString(this Uri uri)
 		{
 			return string.Format("{0}://{1}{2}", uri.Scheme, uri.GetAuthority(), uri.AbsolutePath);
 		}

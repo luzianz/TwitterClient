@@ -2,7 +2,7 @@
 
 namespace LZ.Format.Web
 {
-    internal class QueryParameterComparer : IComparer<KeyValuePair<string, string>>
+	internal class QueryParameterComparer : IComparer<KeyValuePair<string, string>>
 	{
 		#region IComparer<KeyValuePair<string, string>>
 

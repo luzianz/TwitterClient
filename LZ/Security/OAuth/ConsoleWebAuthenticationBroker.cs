@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace LZ.Security.OAuth
 {
-    public class ConsoleWebAuthenticationBroker : IWebAuthenticationBroker
-    {
+	public class ConsoleWebAuthenticationBroker : IWebAuthenticationBroker
+	{
 		private readonly Encoding utf8;
 		
 		public ConsoleWebAuthenticationBroker()
@@ -14,8 +14,8 @@ namespace LZ.Security.OAuth
 			utf8 = System.Text.Encoding.GetEncoding(65001);
 		}
 		
-        public async Task<ICredential> AuthenticateAsync(Uri requestUri, Uri callbackUri = null)
-        {
+		public async Task<ICredential> AuthenticateAsync(Uri requestUri, Uri callbackUri = null)
+		{
 			var requestUriStrb = new StringBuilder();
 			requestUriStrb.Append(requestUri.AbsoluteUri);
 			
@@ -42,11 +42,11 @@ namespace LZ.Security.OAuth
 			listener.Stop();
 			
 			return token;
-        }
+		}
 
-        public Uri GetCurrentApplicationCallbackUri()
-        {
-            return new Uri("http://localhost:8080/");
-        }
-    }
+		public Uri GetCurrentApplicationCallbackUri()
+		{
+			return new Uri("http://localhost:8080/");
+		}
+	}
 }

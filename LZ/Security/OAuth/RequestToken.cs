@@ -1,6 +1,6 @@
 ﻿namespace LZ.Security.OAuth
 {
-    public class RequestToken : Credential
+	public class RequestToken : Credential
 	{
 		public RequestToken(string key, string secret) : base(key, secret) { }
 		

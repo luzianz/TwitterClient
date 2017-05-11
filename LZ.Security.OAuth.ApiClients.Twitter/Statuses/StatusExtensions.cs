@@ -11,6 +11,6 @@ namespace LZ.Security.OAuth.ApiClients.Twitter.Statuses
 		private static Uri BuildUri(string resource, IEnumerable<KeyValuePair<string, string>> parameters)
 		{
 			return new Uri($"{baseUrl}/{resource}?{parameters.ToEncodedQueryString()}");
-        }
+		}
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace LZ.Security.OAuth
 {
-    internal static class TokenParser
+	internal static class TokenParser
 	{
 		public static bool TryParseQueryString(string queryString, out AuthorizationResult result)
 		{
@@ -40,26 +40,26 @@ namespace LZ.Security.OAuth
 			}
 		}
 
-        private static void ParseQueryString(string queryString, IDictionary<string, string> parameters)
-        {
-            string[] queryStringWithMaybeUriAndFragment = queryString.Split('#');
-            // queryStringAndFragment[1] (fragment) is discarded (if exists)
-            string[] queryStringWithMaybeUri = queryStringWithMaybeUriAndFragment[0].Split('?');
-            string[] parameterCoupledStrings = queryStringWithMaybeUri[queryStringWithMaybeUri.Length == 2 ? 1 : 0].Split('&');
+		private static void ParseQueryString(string queryString, IDictionary<string, string> parameters)
+		{
+			string[] queryStringWithMaybeUriAndFragment = queryString.Split('#');
+			// queryStringAndFragment[1] (fragment) is discarded (if exists)
+			string[] queryStringWithMaybeUri = queryStringWithMaybeUriAndFragment[0].Split('?');
+			string[] parameterCoupledStrings = queryStringWithMaybeUri[queryStringWithMaybeUri.Length == 2 ? 1 : 0].Split('&');
 
-            foreach (string parameterCoupledString in parameterCoupledStrings)
-            {
-                string[] parameterPair = parameterCoupledString.Split('=');
+			foreach (string parameterCoupledString in parameterCoupledStrings)
+			{
+				string[] parameterPair = parameterCoupledString.Split('=');
 
-                if (parameterPair.Length > 1)
-                {
-                    parameters.Add(parameterPair[0], parameterPair[1]);
-                }
-                else if (parameterPair.Length == 1)
-                {
-                    parameters.Add(parameterPair[0], null);
-                }
-            }
-        }
-    }
+				if (parameterPair.Length > 1)
+				{
+					parameters.Add(parameterPair[0], parameterPair[1]);
+				}
+				else if (parameterPair.Length == 1)
+				{
+					parameters.Add(parameterPair[0], null);
+				}
+			}
+		}
+	}
 }

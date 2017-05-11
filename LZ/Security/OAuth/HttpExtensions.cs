@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LZ.Security.OAuth
 {
 	public static partial class HttpExtensions
-    {
+	{
 		public async static Task<RequestToken> ObtainRequestTokenAsync(
 			this HttpClient httpClient, 
 			Uri requestUri, 
@@ -25,7 +25,7 @@ namespace LZ.Security.OAuth
 				requestUri,
 				callbackUri);
 
-            httpRequest.Headers.Authorization = new AuthenticationHeaderValue("OAuth", oauthHeader);
+			httpRequest.Headers.Authorization = new AuthenticationHeaderValue("OAuth", oauthHeader);
 
 			HttpResponseMessage response = await httpClient.SendAsync(httpRequest);
 			string responseString = await response.Content.ReadAsStringAsync();
@@ -60,7 +60,7 @@ namespace LZ.Security.OAuth
 			string responseString = await response.Content.ReadAsStringAsync();
 			
 			return ParseAccessToken(responseString);
-        }
+		}
 
 		public async static Task<HttpResponseMessage> AccessResourceAsync(
 			this HttpClient httpClient,

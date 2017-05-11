@@ -63,7 +63,7 @@ namespace LZ.Format.Conversion
 			}
 		}
 
-        public static string ToHexadecimal(this char c, bool useCaps = true)
+		public static string ToHexadecimal(this char c, bool useCaps = true)
 		{
 			return String.Format(
 				"{0}{1}",
