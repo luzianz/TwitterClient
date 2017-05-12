@@ -1,4 +1,4 @@
-﻿#if DNX451
+﻿#if NETCOREAPP1_1 || NETCOREAPP1_0
 using System;
 using C = System.Security.Cryptography;
 
@@ -55,7 +55,7 @@ namespace LZ.Security.Cryptography
 		}
 	}
 }
-#else
+#elif NETFX_CORE
 using System;
 using Windows.Security.Cryptography;
 using Windows.Security.Cryptography.Core;
