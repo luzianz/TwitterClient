@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>dc3fef2a-58e4-4863-ba6f-a419a4965309</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>LZ.Security.OAuth.ApiClients.Twitter</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Statuses\home_timeline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statuses\mentions_timeline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statuses\StatusExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statuses\user_timeline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TwitterUriSet.cs" />
+  </ItemGroup>
+</Project>

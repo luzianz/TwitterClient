@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwitterClientDemo", "TwitterClientDemo.csproj", "{3217C81D-39DA-456F-ABC6-5F74BAD30DBD}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LZ", "..\LZ\LZ.shproj", "{2695779D-AFD2-4253-8E9F-FD9B06A9FE49}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LZ.Security.OAuth.ApiClients.Twitter", "..\LZ.Security.OAuth.ApiClients.Twitter\LZ.Security.OAuth.ApiClients.Twitter.shproj", "{DC3FEF2A-58E4-4863-BA6F-A419A4965309}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\LZ\LZ.projitems*{2695779d-afd2-4253-8e9f-fd9b06a9fe49}*SharedItemsImports = 13
+		..\LZ.Security.OAuth.ApiClients.Twitter\LZ.Security.OAuth.ApiClients.Twitter.projitems*{dc3fef2a-58e4-4863-ba6f-a419a4965309}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3217C81D-39DA-456F-ABC6-5F74BAD30DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3217C81D-39DA-456F-ABC6-5F74BAD30DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3217C81D-39DA-456F-ABC6-5F74BAD30DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3217C81D-39DA-456F-ABC6-5F74BAD30DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

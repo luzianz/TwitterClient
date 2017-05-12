@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>2695779d-afd2-4253-8e9f-fd9b06a9fe49</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>LZ</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Enumerable\EnumerableExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Format\Conversion\ConversionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Format\Web\WebExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Format\Web\_QueryParameterComparer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\Credential.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\Cryptography\HashAlgorithmNames.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\Cryptography\KeyedHashAlgorithm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\ICredential.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\Authorizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\ConsoleWebAuthenticationBroker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\HttpExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\IAuthUriSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\IWebAuthenticationBroker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\RequestToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\_AuthorizationResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\_Format.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\_ParameterNames.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\_ParameterValues.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\OAuth\_TokenParser.cs" />
+  </ItemGroup>
+</Project>
