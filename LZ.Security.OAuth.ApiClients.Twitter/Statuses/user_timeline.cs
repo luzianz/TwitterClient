@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace LZ.Security.OAuth.ApiClients.Twitter.Statuses
 {
-    public static partial class StatusesExtensions
+	public static partial class StatusesExtensions
 	{
 		/// <summary>
 		/// Returns a collection of the most recent Tweets posted by the user indicated by the screen_name or user_id parameters.
