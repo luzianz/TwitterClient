@@ -1,11 +1,12 @@
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 using LZ.Security;
 using LZ.Security.OAuth;
 using LZ.Security.OAuth.ApiClients.Twitter;
 using LZ.Security.OAuth.ApiClients.Twitter.Statuses;
 using Microsoft.Extensions.Configuration;
+using System;
+using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace TwitterClientDemo
 {
@@ -22,6 +23,8 @@ namespace TwitterClientDemo
 
 			// You'll need to create your own secrets.json. See README.md
 			builder.AddJsonFile("secrets.json");
+			builder.SetBasePath(Directory.GetCurrentDirectory());
+
 			Configuration = builder.Build();
 
 			if (!Configuration.TryGetCredential(nameof(consumerCredentials), out consumerCredentials))
