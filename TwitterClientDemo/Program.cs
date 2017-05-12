@@ -2,45 +2,27 @@ using LZ.Security;
 using LZ.Security.OAuth;
 using LZ.Security.OAuth.ApiClients.Twitter;
 using LZ.Security.OAuth.ApiClients.Twitter.Statuses;
-using Microsoft.Extensions.Configuration;
 using System;
-using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace TwitterClientDemo
 {
-	static class Program
+	using static Global;
+
+	class Program
 	{
-		private static ICredential consumerCredentials;
-		private static ICredential accessToken;
-		
-		public static IConfiguration Configuration { get; set; }
-		
 		static void Main()
 		{
-			var builder = new ConfigurationBuilder();
-
-			// You'll need to create your own secrets.json. See README.md
-			builder.AddJsonFile("secrets.json");
-			builder.SetBasePath(Directory.GetCurrentDirectory());
-
-			Configuration = builder.Build();
-
-			if (!Configuration.TryGetCredential(nameof(consumerCredentials), out consumerCredentials))
-			{
-				throw new InvalidOperationException("consumerCredentials required in secrets.json");
-			}
-			
-			Configuration.TryGetCredential(nameof(accessToken), out accessToken);
-			
-			Run().Wait();
+			Run(ConsumerCredentials, AccessToken).Wait();
 			Console.WriteLine("Press any key to exit");
 			Console.ReadKey();
 		}
 		
-		static async Task Run()
+		static async Task Run(ICredential consumerCredentials, ICredential accessToken)
 		{
+			if (consumerCredentials == null) throw new ArgumentNullException(nameof(consumerCredentials));
+			
 			if (accessToken == null)
 			{
 				var authorizer = new Authorizer(consumerCredentials, new ConsoleWebAuthenticationBroker());
